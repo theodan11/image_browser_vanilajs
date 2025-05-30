@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    background-color: #0F0F13;
+}
+
+.titleH{
+    color: #E6E6EA;
+}
+.likeContainer{
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #0f0f13bb;
+    /* padding: 8px; */
+    border-radius: 50%;
+}
+
+.card{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+}
+
+.showBtn{
+    visibility: hidden;
+}
+.buttonContainer{
+    display: flex;
+    align-items: center;
+}
+
+/* .buttonContainer > button{
+    padding: 8px 18px;
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+} */
+.likeAlert, .dislikeAlert{
+    z-index: 999;
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    left: 50px;
+}
+.showMe{
+    display: block;
+    animation: likeAnimation .3s ease .1s 1 normal forwards;
+}
+
+.cardWrapper{
+    margin-top: 10px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cardItem{
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    width: 245px;
+    height: 245px;
+    /* border: 1px solid white; */
+    transition: all .3s ease;
+    box-shadow: 0 0 5px 3px rgba(27, 27, 27, 0.718);
+    animation: cardAnimation .4s ease-in .1s 1 normal forwards;
+}
+
+.countContainer{
+    width: 32px;
+    height: 32px;
+    background-color: rgb(224, 219, 231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 0 8px;
+    /* padding: 18px; */
+}
+
+.cardImage{
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    transition: all .3s ease;
+
+    
+}
+.cardTitleAndUser{
+    position: absolute;
+    bottom: 10px;
+    left: -700px;
+    transition: all .3s ease;
+    padding: 10px 16px;
+    width: 100%;
+}
+
+
+.cardTitleAndUser>h3{
+    font-size: 12px;
+}
+.cardItem:hover{
+    box-shadow: 0 0 5px 3px rgba(41, 45, 71, 0.718);
+}
+.cardItem:hover .cardTitleAndUser{
+    /* position: absolute;
+    bottom: 10px; */
+    background-color: #0f0f13d6;
+    left: 0;
+
+}
+
+.cardItem:hover >img{
+    transform: scale(1.2);
+}
+footer{
+    margin-top: 50px;
+    background-color: #28282d;
+    padding-top: 100px;
+    height: 500px;
+}
+
+@keyframes cardAnimation{
+    0%{
+        transform: scale(98%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
+
+@keyframes likeAnimation{
+    0%{
+        transform: translateX(-300px);
+    }
+    100%{
+        transform: translateX(10px);
+    }
+   
+}
