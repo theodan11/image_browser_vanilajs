@@ -44,7 +44,7 @@ nextBtn.addEventListener("click", () => {
         pageCount += 10
         pageIndi.textContent = `${Math.ceil(pageCount / 10) + 1}`
         renderElement(AlbumData.slice(pageCount, pageCount + 10))
-        console.log(AlbumData.slice(pageCount, pageCount + 10))
+        // console.log(AlbumData.slice(pageCount, pageCount + 10))
     }
 })
 
@@ -53,7 +53,7 @@ nextBtn.addEventListener("click", () => {
 const renderElement = (elements) => {
     let cardItem = document.getElementsByClassName("cardWrapper")[0]
     cardItem.innerHTML = ""
-    console.log(elements["liked"])
+    // console.log(elements["liked"])
     if(isLiked){
         elements  =  elements.filter((element)=> element["liked"] === true)
         showBtn.classList.add("showBtn")
@@ -64,7 +64,7 @@ const renderElement = (elements) => {
     elements.forEach(element => {
         // element["liked"] 
         let userId = UserData.filter((user) => element.albumId === user.id)[0]
-        console.log("user", userId.name)
+        // console.log("user", userId.name)
         // <img src='${element.url}'/>
         const card = document.createElement("div")
         card.className = "cardItem"
@@ -88,13 +88,13 @@ const renderElement = (elements) => {
         cardItem.appendChild(card)
         const likeBtn = card.querySelector(".likeContainer")
         likeBtn.addEventListener("click", () => {
-            console.log(`${element.id}`)
+            // console.log(`${element.id}`)
             let image = AlbumData.find(album => element.id === album.id)
             image["liked"] = !image["liked"]
            
             if (image["liked"]) {
                 likedImageList.push(element)
-                console.log("hello this is like list",likedImageList)
+                // console.log("hello this is like list",likedImageList)
                 const likeAlert = document.getElementsByClassName("likeAlert")[0]
                 likeAlert.classList.toggle("showMe")
                 setTimeout(() => {
@@ -136,8 +136,8 @@ const fetchData = async () => {
         UserData = await userResponse.json()
 
 
-        console.log(UserData)
-        console.log(AlbumData.slice(0, 10))
+        // console.log(UserData)
+        // console.log(AlbumData.slice(0, 10))
         renderElement(AlbumData.slice(0, 10))
 
 

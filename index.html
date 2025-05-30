@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch Cards</title>
+    <title>Photo Album</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
@@ -51,17 +51,20 @@
             <strong class="text-light">Disliked!</strong>
         </div>
     </div>
-  
+
 
     <div class="m-auto container">
         <div class="">
             <div class="">
-                <h1 class="titleH">Photo Album</h1>
+                <h1 class="titleH">Browse</h1>
             </div>
-            <div class="d-flex justify-content-start gap-3 ms-4 mt-5 mb-3">
-                <button class="btn btn-outline-dark" id="allImage">all</button>
-                <button class="btn btn-outline-dark" id="likedImage">liked</button>
-                <div class="ms-auto">
+            <div class="d-flex flex-md-row flex-column justify-md-content-between gap-3 ms-4 mt-5 mb-3">
+                <div class="ms-auto me-auto ms-md-0">
+
+                    <button class="btn btn-outline-dark me-3" id="allImage">all</button>
+                    <button class="btn btn-outline-dark" id="likedImage">liked</button>
+                </div>
+                    <div class="ms-auto me-auto me-md-0">
                     <div class="buttonContainer ">
 
                         <button class="btn btn-dark" id="prevPage">Prev</button>
@@ -73,12 +76,16 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="row">
+                
+            </div> -->
+
         </div>
         <div class="cardWrapper">
 
         </div>
     </div>
-   
+
 
     <footer>
         <div class="container mt-4">
@@ -90,10 +97,11 @@
                 </div>
                 <div class="col-12 col-md-6 mt-5 mt-md-0 text-start">
                     <h4 class="text-light">About</h4>
-                    <p>You can browse for images and like it to add to your like collection. And view the liked image by clicking on liked button.</p>
+                    <p>You can browse for images and like it to add to your like collection. And view the liked image by
+                        clicking on liked button.</p>
                 </div>
             </div>
-           
+
         </div>
     </footer>
 
