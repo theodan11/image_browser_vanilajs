@@ -169,4 +169,11 @@ footer{
         display: grid;
         grid-template-columns: 1fr 1fr;
         }
+
+
+        .likeAlert, .dislikeAlert{
+           
+            top: 20%;
+            left: 20px;
+        }
 }
